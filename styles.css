@@ -87,7 +87,7 @@ a {
   color: #fff;
   background:
     linear-gradient(105deg, rgba(10, 33, 30, 0.94), rgba(10, 33, 30, 0.66) 52%, rgba(10, 33, 30, 0.24)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80") center / cover;
+    url("assets/hero-water.png") center / cover;
 }
 
 .hero-content {
