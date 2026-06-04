@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Pond Watch | NSF Project Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark"></span>
+      <span>Farm Pond Watch</span>
+    </a>
+    <nav class="nav" aria-label="Page navigation">
+      <a href="#overview">Overview</a>
+      <a href="#approach">Approach</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#impact">Impact</a>
+      <a href="#acknowledgment">Support</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">NSF Award #2429932</p>
+        <h1>Farm Pond Watch</h1>
+        <p class="hero-copy">A remote sensing framework for monitoring subseasonal farm pond dynamics and strengthening water resource resilience across the Southern Great Plains.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#approach">View Research Plan</a>
+          <a class="button secondary" href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2429932" target="_blank" rel="noreferrer">NSF Award Page</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="NSF award summary">
+        <div>
+          <span class="panel-label">Institution</span>
+          <strong>University of Oklahoma</strong>
+        </div>
+        <div>
+          <span class="panel-label">Principal Investigator</span>
+          <strong>Chengbin Deng</strong>
+        </div>
+        <div>
+          <span class="panel-label">Award Period</span>
+          <strong>2025-2026</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>Monitoring small water bodies that shape regional water resilience.</h2>
+      </div>
+      <div class="overview-grid">
+        <article class="info-card">
+          <span class="card-index">01</span>
+          <h3>Research Need</h3>
+          <p>Small farm ponds are widely used for livestock, irrigation, fish production, recreation, stormwater retention, and habitat support, yet their cumulative hydrologic impact is often overlooked.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-index">02</span>
+          <h3>Project Goal</h3>
+          <p>The project develops an automated monitoring framework that uses high-resolution satellite time series to detect farm pond changes at regional scale.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-index">03</span>
+          <h3>Expected Value</h3>
+          <p>Timely water-change information can support drought and flood alerts, land and water management, rural economies, and environmental conservation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach" class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Research Approach</p>
+        <h2>From Earth observation data to actionable water intelligence.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item done">
+          <span>Data Foundation</span>
+          <h3>Satellite Time Series</h3>
+          <p>Analyze very high-resolution satellite imagery with frequent revisit cycles to track pond extent and water-cover changes over time.</p>
+        </article>
+        <article class="timeline-item done">
+          <span>Detection Method</span>
+          <h3>Adaptive Change Mapping</h3>
+          <p>Use a data-driven, automated, and adaptive workflow to identify changes in farm ponds, intermittent streams, and ephemeral wetlands.</p>
+        </article>
+        <article class="timeline-item active">
+          <span>Validation</span>
+          <h3>NASA Collaboration</h3>
+          <p>Pair the PI's remote sensing classification expertise with NASA Marshall Space Flight Center collaborators' accuracy assessment and validation expertise.</p>
+        </article>
+        <article class="timeline-item">
+          <span>Decision Support</span>
+          <h3>Resilience Applications</h3>
+          <p>Translate monitoring outputs into timely information that helps explain environmental disturbance, human activity, drought, and flooding impacts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section visual-section">
+      <div class="section-heading">
+        <p class="eyebrow">Paper Figures</p>
+        <h2>COLD water mapping figures and model results.</h2>
+      </div>
+      <div class="visual-grid">
+        <figure class="visual-card wide">
+          <img src="assets/paper-figures/cold-methodology-fig1.png" alt="Methodology to predict water mapping and water change from COLD data">
+          <figcaption>
+            <strong>Figure 1. Methodology</strong>
+            <span>Methodology to predict the water mapping and water change from COLD data.</span>
+          </figcaption>
+        </figure>
+        <figure class="visual-card wide">
+          <img src="assets/paper-figures/cold-water-maps-fig2.png" alt="Water maps generated by classification and regression models compared with Landsat imagery">
+          <figcaption>
+            <strong>Figure 2. Water map visualization</strong>
+            <span>Water maps generated by the classification and regression models, compared with the Landsat image as reference.</span>
+          </figcaption>
+        </figure>
+        <article class="visual-card table-card">
+          <div class="table-wrap">
+            <table>
+              <caption>Table 2. Cross-validation water-body classification metrics across regression and classification models</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2">Metric</th>
+                  <th colspan="3">Regression Models</th>
+                  <th colspan="3">Classification Models</th>
+                </tr>
+                <tr>
+                  <th>GBoosting</th>
+                  <th>RForest</th>
+                  <th>LRegression</th>
+                  <th>XGBoost</th>
+                  <th>RForest</th>
+                  <th>SVC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Overall Acc.</td>
+                  <td><strong>0.91 +/- 0.03</strong></td>
+                  <td>0.90 +/- 0.04</td>
+                  <td>0.89 +/- 0.07</td>
+                  <td>0.92 +/- 0.06</td>
+                  <td>0.89 +/- 0.06</td>
+                  <td><strong>0.92 +/- 0.06</strong></td>
+                </tr>
+                <tr>
+                  <td>WF <= 0.25</td>
+                  <td><strong>0.91 +/- 0.04</strong></td>
+                  <td>0.89 +/- 0.06</td>
+                  <td>0.85 +/- 0.12</td>
+                  <td>0.96 +/- 0.04</td>
+                  <td>0.88 +/- 0.10</td>
+                  <td><strong>0.94 +/- 0.06</strong></td>
+                </tr>
+                <tr>
+                  <td>WF &gt; 0.25</td>
+                  <td><strong>0.81 +/- 0.07</strong></td>
+                  <td>0.85 +/- 0.07</td>
+                  <td>0.92 +/- 0.07</td>
+                  <td>0.74 +/- 0.17</td>
+                  <td>0.81 +/- 0.13</td>
+                  <td><strong>0.81 +/- 0.07</strong></td>
+                </tr>
+                <tr>
+                  <td>F1-score</td>
+                  <td><strong>0.72 +/- 0.09</strong></td>
+                  <td>0.72 +/- 0.11</td>
+                  <td>0.70 +/- 0.19</td>
+                  <td>0.77 +/- 0.15</td>
+                  <td>0.70 +/- 0.21</td>
+                  <td><strong>0.79 +/- 0.11</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <p class="image-credit">COLD figures were extracted from the arXiv preprint PDF.</p>
+    </section>
+
+    <section id="dataset" class="section dataset-section">
+      <div class="section-heading">
+        <p class="eyebrow">Benchmark Dataset</p>
+        <h2>SWD-Net: a benchmark dataset for small water body detection.</h2>
+      </div>
+      <div class="dataset-layout">
+        <article class="dataset-summary">
+          <h3>Small Water Body Detection from very high-resolution imagery</h3>
+          <p>SWD-Net provides an expert-annotated benchmark for delineating small and seasonal water bodies from aerial and satellite imagery. It supports the Farm Pond Watch goal by improving the detection of fine-scale, irregular, and fragmented ponds that are often missed by coarser global water products.</p>
+          <p class="dataset-note">Baseline experiments compare U-Net, Mamba U-Net, SegFormer U-Net, ViT U-Net, and Swin U-Net, with Swin U-Net reporting the strongest test performance.</p>
+          <a href="https://doi.org/10.1109/LGRS.2026.3693039" target="_blank" rel="noreferrer">View DOI</a>
+        </article>
+        <div class="dataset-stats" aria-label="SWD-Net dataset statistics">
+          <article>
+            <strong data-count="10085">0</strong>
+            <span>Image-mask pairs</span>
+          </article>
+          <article>
+            <strong>1024</strong>
+            <span>Pixel patch size</span>
+          </article>
+          <article>
+            <strong data-count="5">0</strong>
+            <span>Baseline architectures</span>
+          </article>
+          <article>
+            <strong data-count="96" data-suffix="%">0</strong>
+            <span>Best F1 score class</span>
+          </article>
+        </div>
+      </div>
+      <div class="dataset-sources">
+        <span>NAIP</span>
+        <span>Google Earth</span>
+        <span>LoveDA</span>
+        <span>U-Net</span>
+        <span>Mamba U-Net</span>
+        <span>SegFormer U-Net</span>
+        <span>ViT U-Net</span>
+        <span>Swin U-Net</span>
+      </div>
+      <div class="dataset-figures">
+        <h3 class="figure-group-title">SWD-Net Figures and Baseline Results</h3>
+        <div class="visual-grid">
+          <figure class="visual-card wide">
+            <img src="https://github.com/user-attachments/assets/b5203bfd-1097-4d7f-88c7-a31a9ffdd77f" alt="Representative SWD-Net samples from the paper">
+            <figcaption>
+              <strong>Fig. 1. Representative SWD-Net samples</strong>
+              <span>Top: 2023 NAIP summer images. Bottom: 2024 Google Earth winter images.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-card detection-card">
+            <img src="https://github.com/user-attachments/assets/2595a9aa-83ae-4224-9b55-6841993de963" alt="SWD-Net segmentation result comparison from the paper">
+            <figcaption>
+              <strong>Fig. 2. Comparison of segmentation results</strong>
+              <span>(a) Original image. (b) Ground truth mask. (c) U-Net. (d) Mamba-U-Net. (e) SegFormer-U-Net. (f) ViT-U-Net. (g) Swin-U-Net.</span>
+            </figcaption>
+          </figure>
+          <article class="visual-card table-card">
+            <div class="table-wrap">
+              <table>
+                <caption>TABLE II. Baseline Performance on the SWD-Net Dataset</caption>
+                <thead>
+                  <tr>
+                    <th>Model (%)</th>
+                    <th>IoU</th>
+                    <th>F1</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>U-Net</td>
+                    <td>93.01</td>
+                    <td>96.27</td>
+                    <td>95.06</td>
+                    <td>97.55</td>
+                  </tr>
+                  <tr>
+                    <td>Mamba-U-Net</td>
+                    <td>87.38</td>
+                    <td>92.88</td>
+                    <td>90.12</td>
+                    <td>96.10</td>
+                  </tr>
+                  <tr>
+                    <td>SegFormer-U-Net</td>
+                    <td>92.36</td>
+                    <td>95.89</td>
+                    <td>94.06</td>
+                    <td>97.91</td>
+                  </tr>
+                  <tr>
+                    <td>ViT-U-Net</td>
+                    <td>91.05</td>
+                    <td>95.13</td>
+                    <td>93.20</td>
+                    <td>97.27</td>
+                  </tr>
+                  <tr>
+                    <td>Swin-U-Net</td>
+                    <td>93.53</td>
+                    <td>96.56</td>
+                    <td>95.02</td>
+                    <td>98.23</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Broader Impacts</p>
+        <h2>Why this work matters beyond a single watershed.</h2>
+      </div>
+      <div class="roadmap">
+        <article>
+          <h3>Water Management</h3>
+          <p>Regional pond dynamics can improve understanding of water balance, streamflow regimes, and resilience under irregular precipitation and frequent drought.</p>
+        </article>
+        <article>
+          <h3>Research Capacity</h3>
+          <p>The fellowship supports an Associate Professor and postdoctoral researcher while strengthening collaboration between the University of Oklahoma and NASA MSFC.</p>
+        </article>
+        <article>
+          <h3>Public Awareness</h3>
+          <p>Updated information on farm ponds can help agencies, organizations, landowners, and communities make more informed decisions about sustainable water use.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="acknowledgment" class="section acknowledgment-section">
+      <div class="section-heading">
+        <p class="eyebrow">Acknowledgment</p>
+        <h2>Supported by NSF and EPSCoR.</h2>
+      </div>
+      <div class="acknowledgment-layout">
+        <div class="acknowledgment-copy">
+          <p>This material is based upon work supported by the U.S. National Science Foundation under Award No. 2429932 through the EPSCoR Research Fellows program.</p>
+          <p class="disclaimer">Any opinions, findings, and conclusions or recommendations expressed in this project report are those of the authors and do not necessarily reflect the views of the U.S. National Science Foundation.</p>
+        </div>
+        <div class="logo-grid" aria-label="Supporting organization logos">
+          <a class="logo-card" href="https://www.nsf.gov/" target="_blank" rel="noreferrer">
+            <img src="assets/logos/nsf-logo.png" alt="U.S. National Science Foundation logo">
+            <span>U.S. National Science Foundation</span>
+          </a>
+          <a class="logo-card" href="https://www.nsf.gov/funding/initiatives/epscor" target="_blank" rel="noreferrer">
+            <img src="assets/logos/nsf-epscor-logo.png" alt="NSF EPSCoR logo">
+            <span>NSF EPSCoR</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section publication-section">
+      <div class="section-heading">
+        <p class="eyebrow">Research Output</p>
+        <h2>Related publication</h2>
+      </div>
+      <article class="publication">
+        <h3>Continuous monitoring of waterbody change detection in Oklahoma using Landsat time series</h3>
+        <p>Pham, Huong; Cheng, Samuel; Hu, Tao; Deng, Chengbin. <em>Remote Sensing Letters</em>, 2025.</p>
+        <a href="https://doi.org/10.1080/2150704X.2025.2544354" target="_blank" rel="noreferrer">View DOI</a>
+      </article>
+      <article class="publication">
+        <h3>SWD-Net: A Benchmark Dataset for Small Water Body Detection from Very High-Resolution Imagery</h3>
+        <p>Liu, Di; Deng, Chengbin; Olofsson, Pontus; Yan, Songkun; Wang, Jiao; Hu, Isabelle; Hong, Yang. <em>IEEE Geoscience and Remote Sensing Letters</em>, 2026.</p>
+        <a href="https://doi.org/10.1109/LGRS.2026.3693039" target="_blank" rel="noreferrer">View DOI</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>NSF Award #2429932 project report site</span>
+    <span>Static site ready for GitHub Pages</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
